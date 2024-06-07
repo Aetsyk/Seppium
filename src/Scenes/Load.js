@@ -21,6 +21,9 @@ class Load extends Phaser.Scene {
     }
 
     create() {
+        // set up key input
+        cursors = this.input.keyboard.createCursorKeys();
+
         this.scene.start("titleScreen"); // immediately go to title screen once loading is done
     }
 

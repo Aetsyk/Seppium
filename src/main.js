@@ -38,6 +38,10 @@ let config = {
 }
 
 var cursors;
+var keyZ;
+var keyX;
+var keyC;
+
 const SCALE = 3;
 
 const game = new Phaser.Game(config);
