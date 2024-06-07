@@ -1,0 +1,47 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "dungeonRooms.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInEditor": 1
+        },
+        "dungeonRooms.tmx": {
+            "scale": 2,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 159.75,
+                "y": 107
+            }
+        },
+        "dungeonRooms.tmx#MainTileset": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/vorte/Desktop/Github/Seppium/assets",
+    "last.imagePath": "C:/Users/vorte/Desktop/Github/Seppium/assets",
+    "map.height": 15,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 20,
+    "openFiles": [
+        "dungeonRooms.tmx"
+    ],
+    "project": "Seppium.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "dungeonRooms.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

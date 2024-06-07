@@ -8,12 +8,16 @@ class Load extends Phaser.Scene {
 
         // load tilemap information
         this.load.image("tiles", "monochrome_packed.png");
+        this.load.tilemapTiledJSON("dungeonRooms", "dungeonRooms.tmj");
 
         // load tilemap as a spritesheet
         this.load.spritesheet("tilesheet", "monochrome_packed.png", {
             frameWidth: 16,
             frameHeight: 16
         });
+
+        // load fonts
+        this.load.bitmapFont("mainFont", "KennyBitFont.png", "KennyBitFont.xml");
     }
 
     create() {

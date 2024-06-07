@@ -1,13 +1,13 @@
-// Jim Whitehead
-// Created: 4/14/2024
+// Akira Shemansky
+// Created: June 2024
 // Phaser: 3.70.0
 //
-// Cubey
+// Seppium
 //
-// An example of putting sprites on the screen using Phaser
+// Roguelike RPG
 // 
-// Art assets from Kenny Assets "Shape Characters" set:
-// https://kenney.nl/assets/shape-characters
+// Art assets from Kenny Assets:
+// https://kenney.nl/assets/
 
 // debug with extreme prejudice
 "use strict"
