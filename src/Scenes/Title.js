@@ -24,7 +24,9 @@ class Title extends Phaser.Scene {
 
     update() {
         if(Phaser.Input.Keyboard.JustDown(keyZ)) { // start game
-            // start game
+            let gameData = {};
+            Object.assign(gameData, gameDataTemplate);
+            this.scene.start("generator", gameData);
         }
         if(Phaser.Input.Keyboard.JustDown(keyX)) { // to tutorial
             // tutorial

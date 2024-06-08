@@ -34,8 +34,21 @@ let config = {
     },
     width: 960,
     height: 720,
-    scene: [Load, Title, Credits]
+    scene: [Load, Title, Credits, Generator]
 }
+
+// data structure for the game
+const gameDataTemplate = {
+    player: {},
+    floor: [],
+    floorLevel: 1,
+    room: "",
+    startPosition: "center",
+    entrance: [-1, -1],
+    exit: [-1, -1]
+}
+const baseFloorWidth = 4;
+const baseFloorHeight = 4;
 
 var cursors;
 var keyZ;
