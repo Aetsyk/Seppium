@@ -12,6 +12,7 @@ class Generator extends Phaser.Scene {
         this.path;
         this.gameData.floor = []; // reset floor plan
         this.floorMirror = []; // blank mirror of floor size used for pathfinding
+        this.gameData.startPosition = "center";
     }
 
     create() {
@@ -70,7 +71,7 @@ class Generator extends Phaser.Scene {
         this.generateRooms(this.gameData.entrance[0], this.gameData.entrance[1]);
 
         // set current room to entrance room
-        this.gameData.room = this.gameData.floor[this.gameData.entrance[1]][this.gameData.entrance[0]].room;
+        this.gameData.room = [this.gameData.entrance[0], this.gameData.entrance[1]];
 
         console.log(this.gameData);
 
@@ -82,7 +83,6 @@ class Generator extends Phaser.Scene {
 
     generateRooms(x, y) {
         this.gameData.floor[y][x].room = roomList[Phaser.Math.Between(0, roomList.length-1)];
-        console.log(x,y);
 
         // north door
         if (y == 0) {

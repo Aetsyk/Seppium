@@ -42,7 +42,7 @@ const gameDataTemplate = {
     player: {},
     floor: [],
     floorLevel: 1,
-    room: "",
+    room: [-1, -1],
     startPosition: "center",
     entrance: [-1, -1],
     exit: [-1, -1]
