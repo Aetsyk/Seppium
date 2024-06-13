@@ -67,36 +67,46 @@ class Generator extends Phaser.Scene {
         this.finder.calculate();
 
         // generate rooms
-        for(let y = 0; y < this.floorHeight; y++) {
-            for(let x = 0; x < this.floorWidth; x++) {
-                // decide room type
-                this.gameData.floor[y][x].room = roomList[Phaser.Math.Between(0, roomList.length-1)];
-                console.log(x,y);
-
-                /* // decide if room should have north door
-                if (y = 0) {
-                    this.gameData.floor[y][x].doors.n = false;
-                }
-
-                // decide if room should have south door
-                if (y = this.floorHeight-1) {
-                    this.gameData.floor[y][x].doors.s = false;
-                }
-
-                // decide if room should have east door
-                if (x = this.floorWidth-1) {
-                    this.gameData.floor[y][x].doors.e = false;
-                }
-
-                // decide if room should have west door
-                if (x = 0) {
-                    this.gameData.floor[y][x].doors.w = false;
-                } */
-            }
-        }
+        this.generateRooms(this.gameData.entrance[0], this.gameData.entrance[1]);
 
         console.log(this.gameData);
+
+        // start gameplay
+        this.scene.start("room", this.gameData);
     }
 
     update() {}
+
+    generateRooms(x, y) {
+        this.gameData.floor[y][x].room = roomList[Phaser.Math.Between(0, roomList.length-1)];
+        console.log(x,y);
+
+        // north door
+        if (y == 0) {
+            this.gameData.floor[y][x].doors.n = false;
+        } else if (this.gameData.floor[y-1][x].room == "") {
+            this.generateRooms(x, y-1);
+        }
+
+        // south door
+        if (y == this.floorHeight-1) {
+            this.gameData.floor[y][x].doors.s = false;
+        } else if (this.gameData.floor[y+1][x].room == "") {
+            this.generateRooms(x, y+1);
+        }
+
+        // east door
+        if (x == this.floorWidth-1) {
+            this.gameData.floor[y][x].doors.e = false;
+        } else if (this.gameData.floor[y][x+1].room == "") {
+            this.generateRooms(x+1, y);
+        }
+
+        // west door
+        if (x == 0) {
+            this.gameData.floor[y][x].doors.w = false;
+        } else if (this.gameData.floor[y][x-1].room == "") {
+            this.generateRooms(x-1, y);
+        }
+    }
 }
