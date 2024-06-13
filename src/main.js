@@ -47,6 +47,7 @@ const gameDataTemplate = {
     entrance: [-1, -1],
     exit: [-1, -1]
 }
+const roomList = ["Box1", "Box2", "Box3"];
 const baseFloorWidth = 4;
 const baseFloorHeight = 4;
 
