@@ -34,7 +34,7 @@ let config = {
     },
     width: 960,
     height: 720,
-    scene: [Load, Title, Credits, Generator]
+    scene: [Load, Title, Credits, Generator, Room]
 }
 
 // data structure for the game

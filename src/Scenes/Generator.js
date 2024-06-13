@@ -69,6 +69,9 @@ class Generator extends Phaser.Scene {
         // generate rooms
         this.generateRooms(this.gameData.entrance[0], this.gameData.entrance[1]);
 
+        // set current room to entrance room
+        this.gameData.room = this.gameData.floor[this.gameData.entrance[1]][this.gameData.entrance[0]].room;
+
         console.log(this.gameData);
 
         // start gameplay
